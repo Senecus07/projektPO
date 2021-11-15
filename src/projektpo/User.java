@@ -6,8 +6,8 @@ public class User extends Person{
     private UserType userType;
     private LocalDate registrationDate;
 
-    public User(String name, String lastName, UnitType unitType, UserType userType){
-        super(name, lastName, unitType);
+    public User(String name, String lastName, UserType userType){
+        super(name, lastName);
         this.setUserType(userType);
         registrationDate = LocalDate.now();
     }

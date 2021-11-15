@@ -4,8 +4,8 @@ public class Employee extends Person{
     private Position occupation;
     private int salary;
 
-    public Employee(String name, String lastName, UnitType unitType, Position occupation, int salary){
-        super(name, lastName, unitType);
+    public Employee(String name, String lastName, Position occupation, int salary){
+        super(name, lastName);
         this.setOccupation(occupation);
         this.setSalary(salary);
     }
