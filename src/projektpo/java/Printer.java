@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public class Printer extends Device{
     private PrinterType printerType;
@@ -8,6 +8,13 @@ public class Printer extends Device{
         super(name, manufacturer, model);
         this.setPrinterType(printerType);
         this.setIntegratedScanner(integratedScanner);
+    }
+
+    @Override
+    public String toString(){
+        return "ID: " + this.getIndex() +"\nNazwa: " + this.getName() + "\nProducent: " + this.getManufacturer() + "\nModel: "
+                + this.getModel() + "\nTyp: " + this.getPrinterType() + "\nZintegrowany skaner: " + (this.hasIntegratedScanner()?"tak":"nie");
+
     }
 
     public PrinterType getPrinterType() {

@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public class Workstation extends Device{
     private ProcessorBrand processorBrand;
@@ -8,6 +8,13 @@ public class Workstation extends Device{
         super(name, manufacturer, model);
         this.setProcessorBrand(processorBrand);
         this.setGraphicCardBrand(graphicCardBrand);
+    }
+
+    @Override
+    public String toString(){
+        return "ID: " + this.getIndex() +"\nNazwa: " + this.getName() + "\nProducent: " + this.getManufacturer() + "\nModel: "
+                + this.getModel() + "\nMarka procesora: " + this.getProcessorBrand() + "\nMarka karty graficznej: " + this.getGraphicCardBrand();
+
     }
 
     public ProcessorBrand getProcessorBrand() {

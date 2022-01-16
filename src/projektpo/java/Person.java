@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public abstract class Person extends LibraryOrganizationalUnit{
     private String lastName;

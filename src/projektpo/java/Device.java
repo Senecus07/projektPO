@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public class Device extends LibraryOrganizationalUnit{
     private String manufacturer;

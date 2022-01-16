@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public class Employee extends Person{
     private Position occupation;
@@ -8,6 +8,13 @@ public class Employee extends Person{
         super(name, lastName);
         this.setOccupation(occupation);
         this.setSalary(salary);
+    }
+
+    @Override
+    public String toString(){
+        return "ID: " + this.getIndex() +"\nImię: " + this.getName() + "\nNazwisko: " + this.getLastName() + "\nStanowisko: "
+                + this.getOccupation() + "\nPensja: " + this.getSalary();
+
     }
 
     public Position getOccupation() {

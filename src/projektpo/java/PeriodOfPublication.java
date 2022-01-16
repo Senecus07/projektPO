@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public enum PeriodOfPublication {
     DAILY,

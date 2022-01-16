@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 import java.time.LocalDate;
 
@@ -10,6 +10,13 @@ public class User extends Person{
         super(name, lastName);
         this.setUserType(userType);
         registrationDate = LocalDate.now();
+    }
+
+    @Override
+    public String toString(){
+        return "ID: " + this.getIndex() +"\nImię: " + this.getName() + "\nNazwisko: " + this.getLastName() + "\nTyp: "
+                + this.getUserType() + "\nData rejestracji: " + this.getRegistrationDate();
+
     }
 
     public UserType getUserType() {

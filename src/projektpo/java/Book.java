@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public class Book extends Resource{
     private String author;
@@ -9,6 +9,13 @@ public class Book extends Resource{
 
         this.setAuthor(author);
         this.setGenre(genre);
+    }
+
+    @Override
+    public String toString(){
+        return "ID: " + this.getIndex() +"\nNazwa: " + this.getName() + "\nAutor: " + this.getAuthor() + "\nGatunek: "
+                + this.getGenre() + "\nLiczba stron: " + this.getNumOfPages();
+
     }
 
     public String getAuthor() {

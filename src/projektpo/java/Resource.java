@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public class Resource extends LibraryOrganizationalUnit{
     private int numOfPages;

@@ -1,4 +1,4 @@
-package projektpo;
+package projektpo.java;
 
 public abstract class LibraryOrganizationalUnit {
     private static int currentFreeIndex = 0;
