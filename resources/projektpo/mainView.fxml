@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projektpo.controllers.MainController">
+   <left>
+      <AnchorPane prefHeight="633.0" prefWidth="187.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addEmployeeBtn" layoutX="27.0" layoutY="33.0" mnemonicParsing="false" onAction="#openAddEmployeeDialog" prefHeight="35.0" prefWidth="140.0" text="Dodaj pracownika" />
+            <Button fx:id="addUserBtn" layoutX="27.0" layoutY="78.0" mnemonicParsing="false" onAction="#openAddUserDialog" prefHeight="35.0" prefWidth="140.0" text="Dodaj użytkownika" />
+            <Button fx:id="addWorkstationBtn" layoutX="27.0" layoutY="125.0" mnemonicParsing="false" onAction="#openAddWorkstationDialog" prefHeight="35.0" prefWidth="140.0" text="Dodaj komputer" />
+            <Button fx:id="addPrinterBtn" layoutX="27.0" layoutY="171.0" mnemonicParsing="false" onAction="#openAddPrinterDialog" prefHeight="35.0" prefWidth="140.0" text="Dodaj drukarkę" />
+            <Button fx:id="addBookBtn" layoutX="27.0" layoutY="219.0" mnemonicParsing="false" onAction="#openAddBookDialog" prefHeight="35.0" prefWidth="140.0" text="Dodaj książkę" />
+            <Button fx:id="addMagazineBtn" layoutX="27.0" layoutY="264.0" mnemonicParsing="false" onAction="#openAddMagazineDialog" prefHeight="35.0" prefWidth="140.0" text="Dodaj czasopismo" />
+         </children></AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="67.0" prefWidth="785.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchTF" layoutX="23.0" layoutY="21.0" />
+            <Button fx:id="searchBtn" layoutX="183.0" layoutY="21.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="66.0" text="Szukaj" />
+            <Button fx:id="resetBtn" layoutX="257.0" layoutY="21.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="66.0" text="Reset" />
+            <ChoiceBox fx:id="filterChoice" layoutX="350.0" layoutY="21.0" prefWidth="150.0" />
+            <Button fx:id="deleteBtn" layoutX="560.0" layoutY="21.0" mnemonicParsing="false" onAction="#deleteObject" text="Usuń obiekt o ID: " />
+            <TextField fx:id="deleteTF" alignment="CENTER" layoutX="671.0" layoutY="21.0" prefHeight="25.0" prefWidth="28.0" />
+         </children></AnchorPane>
+   </top>
+   <right>
+      <Pane prefHeight="633.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="outputLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="166.0" prefHeight="293.0" prefWidth="273.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="borrowBtn" disable="true" layoutX="9.0" layoutY="12.0" mnemonicParsing="false" onAction="#borrowResource" text="Wypożycz zasób o ID: " />
+            <TextField fx:id="resourceTF" alignment="CENTER" disable="true" layoutX="144.0" layoutY="12.0" prefHeight="75.0" prefWidth="55.0" />
+            <Button fx:id="returnBtn" disable="true" layoutX="9.0" layoutY="37.0" mnemonicParsing="false" onAction="#returnResource" prefHeight="25.0" prefWidth="135.0" text="Zwróć zasób o ID: " />
+            <Button fx:id="prolongationBtn" disable="true" layoutX="9.0" layoutY="62.0" mnemonicParsing="false" onAction="#prolongResource" prefHeight="25.0" prefWidth="135.0" text="Prolonguj: " />
+            <Button fx:id="addDeviceBtn" disable="true" layoutX="9.0" layoutY="105.0" mnemonicParsing="false" onAction="#addDevice" prefHeight="25.0" prefWidth="135.0" text="Dodaj urządzenie ID: " />
+            <TextField fx:id="deviceTF" alignment="CENTER" disable="true" layoutX="144.0" layoutY="105.0" prefHeight="50.0" prefWidth="55.0" />
+            <Button fx:id="deleteDeviceBtn" disable="true" layoutX="9.0" layoutY="130.0" mnemonicParsing="false" onAction="#deleteDevice" prefHeight="25.0" prefWidth="135.0" text="Usuń urządzenie ID: " />
+         </children>
+      </Pane>
+   </right>
+   <center>
+      <TableView fx:id="tableView" prefHeight="633.0" prefWidth="549.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idColumn" editable="false" maxWidth="50.0" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="nameColumn" editable="false" prefWidth="200.0" text="Nazwa" />
+            <TableColumn fx:id="typeColumn" editable="false" prefWidth="100.0" text="Typ" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Pane prefHeight="35.0" prefWidth="850.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

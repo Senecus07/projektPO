@@ -1,12 +1,13 @@
 package projektpo.java;
 
 public class Magazine extends Resource{
+    private SubType subType;
     private PeriodOfPublication periodOfPublication;
-    private String category;
+    private MagazineCategory category;
 
-    public Magazine(String name, int numOfPages, PeriodOfPublication periodOfPublication, String category){
+    public Magazine(String name, int numOfPages, PeriodOfPublication periodOfPublication, MagazineCategory category){
         super(name, numOfPages);
-
+        this.setSubType(SubType.Czasopismo);
         this.setPeriodOfPublication(periodOfPublication);
         this.setCategory(category);
     }
@@ -14,7 +15,9 @@ public class Magazine extends Resource{
     @Override
     public String toString(){
         return "ID: " + this.getIndex() +"\nNazwa: " + this.getName() + "\nKategoria: " + this.getCategory() + "\nInterwał publikacji: "
-                + this.getNumOfPages() + "\nLiczba stron: " + this.getNumOfPages();
+                + this.getPeriodOfPublication() + "\nLiczba stron: " + this.getNumOfPages()
+                + "\nWypożyczone przez osobę o ID: " + ((getBorrowedBy() != null) ? getBorrowedBy().getIndex() : " brak") + "\nWypożyczone do:"
+                + ((getBorrowedUntil()  != null)? getBorrowedUntil() : " brak");
 
     }
 
@@ -26,11 +29,19 @@ public class Magazine extends Resource{
         this.periodOfPublication = periodOfPublication;
     }
 
-    public String getCategory() {
+    public MagazineCategory getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(MagazineCategory category) {
         this.category = category;
+    }
+
+    public SubType getSubType() {
+        return subType;
+    }
+
+    public void setSubType(SubType subType) {
+        this.subType = subType;
     }
 }

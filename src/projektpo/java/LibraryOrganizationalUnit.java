@@ -10,8 +10,12 @@ public abstract class LibraryOrganizationalUnit {
     public LibraryOrganizationalUnit(String name, UnitType unitType){
         this.setName(name);
         this.setUnitType(unitType);
-        this.index = currentFreeIndex;
+        this.index = LibraryOrganizationalUnit.getCurrentFreeIndex();
         currentFreeIndex++;
+    }
+
+    public static int getCurrentFreeIndex(){
+        return currentFreeIndex;
     }
 
     public int getIndex() {

@@ -1,7 +1,7 @@
 package projektpo.java;
 
 public enum UnitType {
-    PERSON,
-    DEVICE,
-    RESOURCE
+    Osoba,
+    Urządzenie,
+    Zasób
 }

@@ -10,6 +10,7 @@ import java.io.IOException;
 
 
 import projektpo.java.*;
+import projektpo.models.LibraryDB;
 /*
 import java.util.ArrayList;
 import java.util.List;
@@ -243,9 +244,9 @@ public class Main extends Application{
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("LibraryDB");
         stage.setScene(scene);
         stage.show();
     }
